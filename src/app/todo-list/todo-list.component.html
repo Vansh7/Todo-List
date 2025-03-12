@@ -1,0 +1,57 @@
+<h3><h3>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+<div class="filters">
+  <input type="text" placeholder="Filter by Tag" [(ngModel)]="filterTag" (ngModelChange)="applyFilters()" />
+  <select [(ngModel)]="filterPriority" (change)="applyFilters()">
+    <option value="">All Priorities</option>
+    <option value="High">High</option>
+    <option value="Medium">Medium</option>
+    <option value="Low">Low</option>
+  </select>
+  <input type="text" placeholder="Filter by User" [(ngModel)]="filterUser" (ngModelChange)="applyFilters()" />
+  <select [(ngModel)]="sortField" (change)="applyFilters()">
+    <option value="createdAt">Sort by Date</option>
+    <option value="priority">Sort by Priority</option>
+  </select>
+</div>
+
+<div class="todo-list">
+  <div class="todo-card" *ngFor="let todo of paginatedTodos">
+    <div class="todo-header">
+      <h3 (click)="router.navigate(['/todos', todo._id])" style="font-size: px;">{{ todo.title }}</h3>
+      <div class="action-buttons">
+        <button class="edit-btn" (click)="router.navigate(['/todos/edit', todo._id])">
+          <i class="fas fa-edit"></i>
+        </button>
+        <button class="delete-btn" (click)="deleteTodo(todo._id)">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+      </div>
+    </div>
+    <p class="priority">
+      <!-- <strong>Priority:</strong>  -->
+      <span [ngClass]="{
+        'priority-low': todo.priority === 'Low',
+        'priority-medium': todo.priority === 'Medium',
+        'priority-high': todo.priority === 'High'
+      }">
+        {{ todo.priority }}
+      </span>
+    </p>
+    <div class="tags-users">
+        <p class="tags">
+         
+          <span *ngFor="let tag of todo.tags" class="tag">{{ tag }}</span>
+        </p>
+      
+        <p class="users">
+         
+          <span *ngFor="let user of todo.users" class="user">{{ user }}</span>
+        </p>
+      </div>
+      
+      
+  </div>
+</div>

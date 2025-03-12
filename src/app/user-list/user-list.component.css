@@ -1,0 +1,14 @@
+.user-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .user-list li {
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .user-list li.selected {
+    background-color: #d3d3d3;
+  }
+  

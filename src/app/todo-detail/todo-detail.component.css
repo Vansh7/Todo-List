@@ -1,0 +1,129 @@
+/* Center the main card */
+.todo-detail-card {
+    width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Form-like styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #555;
+    background: #f8f9fa;
+    padding: 8px;
+    border-radius: 5px;
+  }
+  
+  /* Notes Section */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: #f1f1f1;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  /* Add Note Button */
+  .add-note-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .add-note-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Modal Overlay - Full screen */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Modal Card - Centered */
+  .modal-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+  }
+  
+  .close {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .close:hover {
+    color: red;
+  }
+  
+  /* Note Input */
+  textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+    margin-top: 10px;
+  }
+  
+  /* Submit Note Button */
+  .submit-note-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .submit-note-btn:hover {
+    background-color: #218838;
+  }
+  

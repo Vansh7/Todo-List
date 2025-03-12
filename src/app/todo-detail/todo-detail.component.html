@@ -1,0 +1,29 @@
+<!-- Centered Card for Todo Details -->
+<div class="todo-detail-card">
+  <h2 class="title">{{ todo.title }}</h2>
+
+  <div class="info-row"><strong>Description:</strong> <span>{{ todo.description }}</span></div>
+  <div class="info-row"><strong>Priority:</strong> <span>{{ todo.priority }}</span></div>
+  <div class="info-row"><strong>Tags:</strong> <span>{{ todo.tags?.join(', ') || 'No Tags' }}</span></div>
+  <div class="info-row"><strong>Users:</strong> <span>{{ todo.users?.join(', ') || 'No Users' }}</span></div>
+
+  <div class="info-row">
+    <strong>Notes:</strong> 
+    <span *ngIf="todo.notes.length === 0">No Notes</span>
+    <ul *ngIf="todo.notes.length > 0">
+      <li *ngFor="let n of todo.notes">{{ n }}</li>
+    </ul>
+  </div>
+
+  <button class="add-note-btn" (click)="openNoteModal()">Add Note</button>
+</div>
+
+<!-- Modal for Adding a Note -->
+<div class="modal-overlay" *ngIf="showModal">
+  <div class="modal-card">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h3>Add Note</h3>
+    <textarea [(ngModel)]="note" placeholder="Write your note here..."></textarea>
+    <button class="submit-note-btn" (click)="addNote()">Submit Note</button>
+  </div>
+</div>
