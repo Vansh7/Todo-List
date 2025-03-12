@@ -1,0 +1,41 @@
+1. Overview
+This is a simple Todo List application built with Angular that allows users to manage their tasks efficiently. Users can create, edit, delete, and filter todos based on priority, tags, and assigned users.
+2. Features Implemented
+Todo Management
+    • Create new todos with title and description
+    • Add tags and priority (High, Medium, Low)
+    • Mention other users using @username
+    • Edit existing todos
+    • Delete todos
+Todo Details
+    • Click on a todo to view its details
+    • Add notes via a modal when clicking the "Add Note" button
+List View Features
+    • Display all todos in a structured list
+    • Filter todos by tags, priority, or users
+    • Sort todos by creation date, priority, etc.
+
+3. Technology Stack
+    • Frontend: Angular, TypeScript, HTML, CSS
+    • Backend: Node.js (Express)
+    • Storage: Local Storage / API
+
+4. Installation & Setup
+bash
+CopyEdit
+# Clone the repository
+git clone <repo_url>
+
+# Navigate to the project folder
+cd todo-list
+
+# Install dependencies
+npm install
+
+# Run the application
+ng serve
+
+Visit http://localhost:4200/ to access the application.
+
+5. Future Improvements
+    • Improved Filtering & Searching
